@@ -50,7 +50,7 @@
 
       {% when 'article_content' %}
         <div class="flex items-center justify-center">
-          <div class="max-w-7xl">
+          <div class="max-w-5xl">
             {{ article.content }}
           </div>
         </div>
@@ -59,6 +59,16 @@
     {% endcase %}
   {% endfor %}
 </article>
+
+{% if blog.comments_enabled? %}
+  <div id="comments" class="my-8">
+    {% if article.comments_count > 0 %}
+      <div class="flex items-center justify-center"></div>
+    {% else %}
+      There are no comments in this article
+    {% endif %}
+  </div>
+{% endif %}
 
 {% schema %}
 {
