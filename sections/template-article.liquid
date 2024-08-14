@@ -79,11 +79,41 @@
               name="comment[author]"
               type="text"
               class="w-full text-gray-700 border py-3 px-4 mb-3 focus:outline-none"
-              placeholder="Jane Doe"
+              placeholder="Rajesh Doe"
               required
             >
           </div>
-          <div class="px-3 md:w-1/2"></div>
+          <div class="px-3 md:w-1/2">
+            <label for="comment_email" class="text-gray-700 font-medium uppercase text-xs mb-2"> Email </label>
+            <input
+              id="comment_email"
+              name="comment[email]"
+              type="email"
+              class="w-full text-gray-700 border py-3 px-4 mb-3 focus:outline-none"
+              placeholder="rajesh@doe.com"
+              required
+            >
+          </div>
+        </div>
+        <div class="px-1 md:flex mb-3">
+          <div class="md:w-full px-3">
+            <label for="comment_content" class="uppercase text-gray-700 font-medium text-xs mb-2">Comment</label>
+            <textarea
+              class="w-full text-gray-700 resize-none h-20 py-2 px-3 focus:outline-none border"
+              name="comment[body]"
+              id="comment_content"
+              required
+            >   </textarea>
+          </div>
+        </div>
+        <div class="px-1 md:flex mb-3">
+          <div class="md:w-full px-3">
+            <input
+              type="submit"
+              class="w-full point-cursor px-4 py-2 border text-base font-medium text-white bg-gray-900 hover:bg-gray-500"
+              value="Post comment"
+            >
+          </div>
         </div>
       </div>
     {% endform %}
