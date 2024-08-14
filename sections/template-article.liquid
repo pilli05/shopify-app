@@ -3,10 +3,10 @@
     {% case block.type %}
       {% when 'article_title' %}
         <div class="flex justify-center items-center">
-          <div class="max-w-7xl">
+          <div class="max-w-7xl flex flex-col items-center">
             <a
               href="{{ blog.url }}"
-              class="text-base uppercase text-gray-500 hover:text-gray-900 font-bold text-center"
+              class="text-base uppercase text-gray-500 hover:text-gray-900 font-bold"
             >
               {{ blog.title }}
             </a>
