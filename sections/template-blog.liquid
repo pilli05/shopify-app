@@ -13,6 +13,7 @@
       {% if article.excerpt > 0 %}
       {% else %}
         <p>{{ article.content | truncatewords: 20 | strip_html }}</p>
+        <p>{{ article.content }}</p>
       {% endif %}
     </div>
   {% endfor %}
