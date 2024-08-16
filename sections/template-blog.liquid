@@ -5,8 +5,8 @@
         <img
           src="{{ article.image | image_url:"medium" }}"
           alt="{{ article.image.alt }}"
-          width="300"
-          height="200"
+          width=""
+          height=""
         >
       {% else %}
         {{ 'image' | placeholder_svg_tag: 'w-20' }}
