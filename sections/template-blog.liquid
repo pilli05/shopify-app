@@ -11,12 +11,12 @@
                   <img
                     src="{{ article.image | img_url: 'medium' }}"
                     alt="{{ article.image.alt }}"
-                    class="w-full h-80 object-cover"
+                    class="w-full h-50 object-cover"
                   >
                 </a>
 
               {% else %}
-                {{ 'image' | placeholder_svg_tag: 'w-full h-80 object-cover bg-gray-100' }}
+                {{ 'image' | placeholder_svg_tag: 'w-full h-50 object-cover bg-gray-100' }}
               {% endif %}
               <div class="p-4 ">
                 <h1 class="text-xl font-medium my-4 ">{{ article.title }}</h1>
@@ -27,7 +27,7 @@
                     <p>{{ article.content | truncatewords: 20 | strip_html }}</p>
                   {% endif %}
 
-                  <a href="{{ article.url }}" class="font-medium text-blue-600 hover:text-blue-800">
+                  <a href="{{ article.url }}" class="font-medium text-blue-600 hover:text-blue-800 my-4">
                     {{- section.settings.blog_read_more -}}
                   </a>
                 {% endif %}
