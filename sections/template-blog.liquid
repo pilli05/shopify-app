@@ -15,7 +15,7 @@
             {% endif %}
             <h1>{{ article.title }}</h1>
             {% if section.settings.show_descriptions %}
-              {% if article.excerpt %}
+              {% if article.excerpt > 0 %}
                 <p>{{ article.excerpt | truncatewords: 20 | strip_html }}</p>
               {% elsif article.content %}
                 <p>{{ article.content | truncatewords: 20 | strip_html }}</p>
