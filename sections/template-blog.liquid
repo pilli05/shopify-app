@@ -6,9 +6,8 @@
         {% for article in blog.articles %}
           <div>
             {% if article.image %}
-              <p>Image URL: {{ article.image | image_url: 'medium' }}</p>
               <img
-                src="{{ article.image | image_url:"medium" }}"
+                src="{{ article.image | image_url: 'medium' }}"
                 alt="{{ article.image.alt }}"
               >
             {% else %}
