@@ -17,8 +17,10 @@
             {% if section.settings.show_descriptions %}
               {% if article.excerpt %}
                 <p>{{ article.excerpt | truncatewords: 20 | strip_html }}</p>
-              {% else %}
+              {% elsif article.content %}
                 <p>{{ article.content | truncatewords: 20 | strip_html }}</p>
+              {% else %}
+                <p>No description available.</p>
               {% endif %}
             {% endif %}
           </div>
