@@ -10,13 +10,15 @@
                 <img
                   src="{{ article.image | img_url: 'medium' }}"
                   alt="{{ article.image.alt }}"
+                  class="w-full h-80 object-cover"
                 >
               {% else %}
-                {{ 'image' | placeholder_svg_tag: 'w-20' }}
+                {{ 'image' | placeholder_svg_tag: 'w-full h-80 object-cover bg-gray-100' }}
               {% endif %}
               <h1>{{ article.title }}</h1>
               {% if section.settings.show_descriptions %}
                 {% if article.excerpt.size > 0 %}
+                  <p>{{ article.excerpt | strip_html | truncatewords: 20 }}</p>
                 {% else %}
                   <p>{{ article.content | truncatewords: 20 | strip_html }}</p>
                 {% endif %}
