@@ -40,7 +40,7 @@
             <img
               src="{{ article.image | img_url:"large" }}"
               alt="{{ article.image.alt }}"
-              class="w-full h-80 md:h-96 object-cover object-center p-5"
+              class="w-full h-80 md:h-96 object-cover object-center p-5 rounded-lg"
             >
           {% else %}
             {% assign place_holder_image = 'lifestyle-2' %}
