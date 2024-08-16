@@ -14,9 +14,12 @@
               {{ 'image' | placeholder_svg_tag: 'w-20' }}
             {% endif %}
             <h1>{{ article.title }}</h1>
-            {% if article.excerpt > 0 %}
-            {% else %}
-              <p>{{ article.content | truncatewords: 20 | strip_html }}</p>
+            {% if section.settings.show_descriptions %}
+              {% if article.excerpt > 0 %}
+                <p>{{ article.excerpt | truncatewords: 20 | strip_html }}</p>
+              {% else %}
+                <p>{{ article.content | truncatewords: 20 | strip_html }}</p>
+              {% endif %}
             {% endif %}
           </div>
         {% endfor %}
@@ -37,6 +40,12 @@
       "max": 6,
       "label": "Blog posts per page",
       "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "show_descriptions",
+      "label": "Show article descriptions",
+      "default": true
     }
   ]
 }
